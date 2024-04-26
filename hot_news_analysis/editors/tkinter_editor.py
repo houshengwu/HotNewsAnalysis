@@ -15,7 +15,9 @@ def editor(filename):
     contents.pack(side=tk.BOTTOM, expand=True, fill=tk.BOTH)
 
     if not os.path.isfile(filename):
-        os.mknod(filename)
+        # os.mknod(filename)
+        with open(filename, 'w') as an_alias_for_it:
+            pass
 
     with open(filename, 'r', encoding='utf-8') as f:
         contents.delete('1.0', tk.END)

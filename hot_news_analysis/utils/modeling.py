@@ -136,7 +136,7 @@ def feature_reduction(matrix, pca_n_components=50, tsne_n_components=2):
 def get_word2vec_model(text_path):
     """训练词向量模型"""
     sentences = word2vec.LineSentence(text_path)
-    model = word2vec.Word2Vec(sentences, hs=1, min_count=1, window=3, size=100)
+    model = word2vec.Word2Vec(sentences, hs=1, min_count=1, window=3, vector_size=100)
     return model
 
 
