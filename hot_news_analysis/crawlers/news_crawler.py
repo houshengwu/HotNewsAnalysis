@@ -63,6 +63,7 @@ def get_latest_news(net, top=80, show_content=False):
     latest_news_function = latest_news_functions[net]
     template_url = template_urls[net]
     df = eval('{}(\'{}\',{},{})'.format(latest_news_function, template_url, top, show_content))
+    print(df)
     return df
 
 
